@@ -333,9 +333,9 @@ public class ReservasView extends JFrame {
 			String fechaS = ((JTextField)txtFechaE.getDateEditor().getUiComponent()).getText();
 			Reserva reserva = new Reserva(java.sql.Date.valueOf(fechaE), java.sql.Date.valueOf(fechaS), txtValor.getText(), txtFormaPago.getSelectedItem().toString());
 			controlerReserva.guardar(reserva);
-			JOptionPane.showConfirmDialog(null,"Desea crear esta reserva?");
+			JOptionPane.showConfirmDialog(contentPane,"Registro Creado");
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Error:" + e.getMessage(), "Erro", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(contentPane, "Error:" + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 		}
 	}
 	
